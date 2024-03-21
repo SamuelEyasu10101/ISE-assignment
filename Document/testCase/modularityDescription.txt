@@ -1,0 +1,22 @@
+SeasonDeterminer Module
+
+Design Decisions:
+	Focused Functionality: This module is dedicated solely to determining the season based on a country and month. This singular focus ensures high cohesion within the module, as all its parts work together towards a common, well-defined goal.
+    	Encapsulation: It encapsulates all the logic necessary for its function, hiding the details of its internal implementation from other parts of the program. This means changes to the module's internals (like changing the data structure for season mapping) won't affect other modules.
+    	Clear Interface: By clearly defining its inputs (country and month) and outputs (season name), it provides a straightforward and predictable interface for other parts of the program, facilitating easy interaction without needing to understand its inner workings.
+
+Modularity Principles:
+
+    high Cohesion: The module exhibits high cohesion by concentrating related and essential functionalities within a single, well-defined module.
+    Loose Coupling: This module can operate independently of others, interacting through well-defined interfaces (inputs and outputs), which minimizes dependencies on other parts of the program.
+    low redundancy: the are few if any repeted part or funactionality in the progarms.
+    
+TemperatureValidator Module
+
+Design Decisions:
+
+    Specialized Responsibility: This module has one specific task—validating the provided temperature against the known averages and ranges for a city. Such specialization ensures that the module remains manageable and maintainable.
+    
+    Flexible Input Method: The decision to allow input through different methods (keyboard, parameters) adds flexibility, enabling this module to be used in various contexts or larger systems without modification.
+    
+    Informative Output: Returning detailed strings explaining the validation result makes the module's outputs informative and directly usable, simplifying further processing or user interaction.

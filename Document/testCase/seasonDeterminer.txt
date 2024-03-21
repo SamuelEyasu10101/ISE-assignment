@@ -1,0 +1,6 @@
+Test Case 1: 
+Input country = "Australia", month = 5 (May). Expected output: "Autumn".
+    
+    
+Test Case 2: 
+Input country = "UAE", month = 1 (January). Expected output: "Winter".
