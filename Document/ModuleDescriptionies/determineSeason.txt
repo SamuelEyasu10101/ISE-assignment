@@ -1,0 +1,17 @@
+Module name: determineSeason
+
+Description: the purpose of this module is to determine the season of limited number of countries which include austrlia, United arab emirates, malaysia, singapore.Furthermore, the month the user can enter is with in the range of 1-12.
+
+Responsbilities: the output should be pricise, with the right and intended out put. it should be cohensive,have low redundancy and have low coupling.
+
+input: the input that should be recived is integer representing the months of the year. if the user enters any other type of out put it give a prompt such as "invaid input" and ask for the user to enter input again.
+
+process: the process includes using the input from the user to then ask the country to give specific season name such as summer or Birak(noongar).
+
+output: the method will return seasons in a string format as output.
+
+assamptions: we assume that the user inputs the data type in integer format, using an operating system, knows how to run programs.
+
+Testing strategy:the strategy i would use equlivalince partitioning and Boundary value analysis.
+
+

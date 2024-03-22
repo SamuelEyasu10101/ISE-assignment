@@ -1,9 +1,0 @@
-Name: TemperatureValidator
-Purpose: Validates a given temperature reading for a specified city, checking if it's within the expected range and how it compares to the city's average temperature.
-  Inputs:
-      city: A string representing the city's name (e.g., "Perth", "Dubai").
-      temperature: A double representing the temperature reading to validate.
-  Outputs: A string describing the result of the validation (e.g., "Valid", "Below average", "Above average", "Invalid").
-    Input Method: Could be from keyboard entry or parameter passing, depending on the desired implementation flexibility.
-    Output Method: The result is returned as a string, but it can also be displayed on the screen or written to a log file for further analysis.
-    Assumptions: The module assumes the temperature input is a real number and that the city's temperature data (average, minimum, maximum) is preloaded or accessed within the module.

@@ -1,9 +1,0 @@
-Name: SeasonDeterminer
-Purpose: Determines the meteorological season based on the given country and month. It uses predefined data correlating months to seasons for specified countries.
-Inputs:
- 	country: A string representing the country's name (e.g., "Australia", "UAE").
-         month: An integer representing the month (1-12).
-    Outputs: A string indicating the season (e.g., "Summer", "Winter").
-         Input Method: Parameters passed directly to the method.
-         Output Method: Returns the season name as a string.
-Assumptions: Assumes that the country and month inputs are valid and within the expected range. The data for season mapping is predefined within the module.
