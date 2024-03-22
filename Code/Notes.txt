@@ -1,7 +1,0 @@
-Note:
-
-    The provided code is simplified and assumes specific input formats and logic.
-    
-    Actual implementation should include error handling, user input prompts, and possibly reading data from external sources for a robust solution.
-    
-    Ensure that your Java development environment is set up correctly to compile and run the program.
