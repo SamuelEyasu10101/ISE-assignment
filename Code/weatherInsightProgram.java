@@ -47,7 +47,7 @@ public class weatherInsightProgram {
                 minTemp = 0.7; maxTemp = 46.0; avgTemp = 18.2;
                 break;
             case "dubai":
-                minTemp = 1.5; maxTemp = 48.0; avgTemp = 26.9;
+                minTemp = 1.5; maxTemp = 49.0; avgTemp = 26.9;
                 break;
             default:
                 return "City not recognized.";
@@ -144,12 +144,23 @@ public class weatherInsightProgram {
 	}
 	
     private static void handleTemperatureValidation(Scanner scanner) {
-    	System.out.print("Enter the city: ");
-    	String city = scanner.nextLine().trim();
+    	String city = "";
+	boolean inRange = true;
+    	while (inRange) {
+        		System.out.print("Enter the city (Perth or Dubai): ");
+        		city = scanner.nextLine().trim();
+
+        		// Check if the city is valid and not a numeric value
+        		if (!(city.equalsIgnoreCase("Perth") || city.equalsIgnoreCase("Dubai")) || city.matches("\\d+")) {
+            			System.out.println("Invalid input. Please enter 'Perth' or 'Dubai'.");
+            			continue;
+        		}
+        		inRange = false; // Exit the loop if a valid city is entered
+    		     }
 
     	System.out.print("Enter the temperature: ");
     	while (!scanner.hasNextDouble()) {
-        	System.out.println("Invalid input; please enter a valid temperature:");
+        	System.out.print("Invalid input; please enter a valid temperature:");
         	scanner.next(); // consume the invalid input
     	}
     	double temperature = scanner.nextDouble();
