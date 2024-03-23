@@ -1,7 +1,0 @@
-Test Case 1: 
-Input city = "Perth", temperature = 50 (above expected range). Expected output: "Invalid".
-
-Test Case 2: 
-Input city = "Dubai", temperature = 25 (within range, below average). Expected output: "Below average"
-
-

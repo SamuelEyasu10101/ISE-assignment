@@ -1,0 +1,7 @@
+method refined: add switch cases to make the method(seasonsAustralia) cleaner and more readable.
+
+helper method: add a new method that would specfically the month and userChoice to add higher cohesion to the code and less reputation which would make the code less redandant.
+
+new method: used to validate if the user input(Country) is with in the range.
+
+cleaner code: removed repeated varables to make the code less and much cleaner. less redundant

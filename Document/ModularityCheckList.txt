@@ -1,0 +1,11 @@
+Item|  |Checklist Question Related to Modularity                           |Yes/No|  Description of the Issue if No is the Answer
+1     Does the code minimize coupling between modules?                   |No      The code is contained within a single class, which leads to high internal coupl                                                                                  ing without clear module separation.
+
+2     Is there redundant code that could be abstracted?                  |Yes     While some parts of the code could be more DRY (Don't Repeat Yourself), the met                                                                                  hods generally perform distinct tasks with minimal overlap.
+
+3     Are logical structures repeated unnecessarily?                     |Yes     The handling of country and calendar type checks in determineSeason and determi                                                                                  neSeasonAustralia could be streamlined.
+
+4     Does each class/module follow the Single Responsibility Principle? |No      The weatherInsightProgram class handles UI, business logic, and data validation                                                                                  , which could be separated into distinct classes.
+
+5     Is there functional cohesion within the modules?                   |No      The weatherInsightProgram demonstrates mixed responsibilities, suggesting poten                                                                                  tial improvements in cohesion.
+
