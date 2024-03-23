@@ -1,0 +1,4 @@
+Module: main
+Imports: None (Entry point of the application)
+Exports: None (Direct output to terminal)
+Description: Serves as the entry point of the application. It interacts with the user through the terminal, allowing them to choose between finding the season for a specific country and month, validating temperatures for specific cities, or exiting the program. It utilizes a loop for continuous operation until the user decides to exit.

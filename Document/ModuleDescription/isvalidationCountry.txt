@@ -1,0 +1,4 @@
+Module: isValidCountry
+Imports: String country
+Exports: boolean (Indicates if the country is valid)
+Description: Checks if the provided country name is valid based on a predefined list of countries for which the season can be determined.

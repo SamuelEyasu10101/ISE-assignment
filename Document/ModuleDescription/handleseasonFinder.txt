@@ -1,0 +1,4 @@
+Module: handleSeasonFinder
+Imports: Scanner scanner
+Exports: None (Direct output to terminal)
+Description: Handles user input to find the season for a specified country and month. It prompts the user for the country and month, validates the inputs, and then uses determineSeason to find and display the season.

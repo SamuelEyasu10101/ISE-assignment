@@ -1,0 +1,4 @@
+Module: handleTemperatureValidation
+Imports: Scanner scanner
+Exports: None (Direct output to terminal)
+Description: Handles user input to validate the temperature for a specified city. It prompts the user for the city and temperature, validates the inputs, and uses validateTemperature to assess and display whether the temperature is within an expected range.

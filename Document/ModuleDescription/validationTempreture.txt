@@ -1,0 +1,4 @@
+Module: validateTemperature
+Imports: String city, double temperature
+Exports: String (Temperature validation message)
+Description: Validates the temperature for a given city by checking if it falls within the predefined minimum, maximum, and average temperature ranges. It provides messages for temperatures that are outside the valid range, significantly differ from the average, or are within the normal range.

@@ -1,0 +1,4 @@
+Module: determineSeason
+Imports: String country, String calendarType, int month
+Exports: String (Season name or message)
+Description: This method determines the season for a given country, calendar type, and month. It handles various countries with specific season determination logic, including a detailed case for Australia with its unique Noongar calendar system. For unrecognized countries, it provides a default message.

@@ -1,0 +1,4 @@
+Module: determineSeasonAustralia
+Imports: String calendarType, int month
+Exports: String (Season name or message)
+Description: A helper method specifically for determining seasons in Australia. It supports both the Gregorian and Noongar calendar systems, returning the season name according to the provided month and calendar type.
