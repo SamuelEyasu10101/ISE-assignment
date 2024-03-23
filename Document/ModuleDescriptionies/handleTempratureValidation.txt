@@ -1,0 +1,17 @@
+Module name: handleTempratureValidation()
+
+discription: method used to varify the city the user inputed is with in the allowed range(Perth or Dubai). it also verifies the user temprature input.
+
+reponsiability: if the user enter the correct values it should return them to another method to then be displayed to the user. 
+
+input: the user will be prompted to enter the city in a String data type and the temprature in double data type.
+
+process: the user enters the data then the program check if it is the valide range in a while loop if not it will display an error message and tell the user to enter it again.
+
+output: the proper values such as the city and temprature will be used by another method to then be displayed to the user.
+
+assumptions: the method should be able to validate the users input as being the proper and in range values and return it to the method that needs the input to be validated so that it can be outputed to the user.
+
+testing Strategy: equlivalance partioning and Boundary value analysis for the temparature.
+
+

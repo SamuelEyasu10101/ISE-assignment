@@ -1,0 +1,15 @@
+Module name: isValidCountry()
+
+description: used to handle the user input just incase the user enter a country out side the range of the program.
+
+reponsibilities: the program should be able to verify the user input is in the range of countries.
+
+input: the userinput is a String data type with in the range of countries which include uae or united arab emirates, singapore, malaysia, australia.
+
+process: the user input then the method checks if it matchies with the countries then output the Country to another method.
+
+output: return the countries, which include uae or united arab emirates, singapore, malaysia and australia.
+
+assumption: the output will be between the countries(uae, united arab emiratesm singapore, malaysia or austrilia).
+
+testing strategy: evaluating that the returned value is in fact the wanted output.

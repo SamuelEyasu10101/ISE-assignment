@@ -1,0 +1,19 @@
+Module name: determineSeasonAustralia
+
+description: the funaction of this module is that it takes input user(month or calender) to determine the calendar in noongar or defualt calendar to output the season.
+
+responsibility: this program is responsable for out putting the season in austrila based of the calendar the user follows(noongar or defualt).
+
+inputData format: the input begin used is a String for the clander type and integer for months of the year. validations includde the user input needs to be eihter noongar calender or defualt calendar. 
+
+process: uses the if-else statement to check if the user entered noongar or if not it will use default calender. next step is to take the user input(month) based of that the output season will be displayed.
+
+output: will return String values such as Birak(noongar).
+
+assumption: the user needs to run the program. the user can only know the season in limited countries. the user need to input proper data types if not there are error handlers to prevent error execpations.
+
+testing strategies: create test cases, black box testing such as Equlivalance partioning.
+
+  
+
+

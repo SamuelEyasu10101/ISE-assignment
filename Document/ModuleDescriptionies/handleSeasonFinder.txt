@@ -1,0 +1,19 @@
+Module name: handleSeasonFinder()
+
+description: to this method should be able to prompt the user to enter there country, month, calenderType and if the user enters input that isn't in the scope the program it will display an error message and ask the user to enter the right input until then it will not stop loop.
+
+responability: it should validate the users input at every turn. to ensure the user gets the right result.
+
+input: the user will get the data types String for the Calender, integer for the specfic month, String for country.
+
+process: the user input will be in a while loop and if-statments till the user enter the proper input that is allowed based of the description.
+
+output: this specific porgram displays error messages or try again messages until the user enter the proper input or data type.
+
+assiumptions: the user may not input the proper data type or allowed input. that is way this method was created.
+
+testing stratgies: giving the wrong outputs and even wrong data types to see if the method handles it correctly.
+
+
+
+

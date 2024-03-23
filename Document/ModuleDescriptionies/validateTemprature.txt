@@ -1,0 +1,15 @@
+Module name: valiadationTemperature()
+
+description: used to valiadate the temprature of a city specficaly only perth(Austrila) and Dubai(UAE).
+
+responability: the method responabile in varifying the tempreature of two cities(perth/Dubai) and returning it in the main[] to be outputed the user.
+
+input: the userinput is temperture and city, which is an double data type(tempreture) and String(City).
+
+process: based of the users input(City) and temprature the user inputed the method will return String prompts.
+
+output: return "Invalid temperature range" or "Temprature difference is greater than 6c from the average"
+
+assumptions: the method returns the intended output based of the temprature and city.
+
+testing strategy: include unit testing, equlvalance testing, and writing test cases.
