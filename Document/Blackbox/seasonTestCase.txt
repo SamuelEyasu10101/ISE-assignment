@@ -1,0 +1,8 @@
+|Category|							|Test Data|				|Expected Result|
+Valid country with meteorological calendar			Country: Australia, Month: 1		Summer
+Country with two calendar types					Country: Australia, Month: 6, 		Calendar: Noongar	Makuru
+Invalid country							Country: Atlantis, Month: 5		Invalid input or country not recognized
+Invalid month (low boundary)					Country: Australia, Month: 0		Invalid month provided
+Invalid month (high boundary)					Country: Australia, Month: 13		Invalid month provided
+Non-Australia country, valid input				Country: UAE, Month: 7			Summer
+Singapore with inter-monsoon					Country: Singapore, Month: 10		Inter-monsoon

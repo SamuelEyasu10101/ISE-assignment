@@ -1,0 +1,7 @@
+|Category|				|Test Data|	      	        		|Expected Result|
+Valid temperature within range		City: Perth, Temperature: 20.0			Temperature is within the normal range
+Temperature below minimum		City: Dubai, Temperature: 0.0			Invalid temperature range
+Temperature above maximum		City: Dubai, Temperature: 50.0			Invalid temperature range
+Temperature near average, valid		City: Perth, Temperature: 24.2			Temperature is within the normal range
+City not recognized			City: Gotham, Temperature: 15.0	City not recognized
+Temperature difference greater than 6°C	City: Dubai, Temperature: 35.0			Temperature difference is greater than 6°C from the average
