@@ -1,0 +1,4 @@
+javac src/main/java/*.java src/test/java/*.java
+java -jar /usr/share/java/junit-platform-console-standalone.jar -cp . --scan-classpath
+
+they should be executed from the projectdir(Code).

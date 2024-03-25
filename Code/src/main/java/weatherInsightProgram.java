@@ -16,37 +16,48 @@ public class weatherInsightProgram {
             int choice = getInputAsInt(scanner);
 
             switch (choice) {
-                case 1 -> handleSeasonFinder(scanner);
-                case 2 -> handleTemperatureValidation(scanner);
-                case 3 -> {
-                    System.out.println("Exiting the program. Goodbye!");
-                    continueRunning = false;
-                }
-                default -> System.out.println("Invalid option. Please try again.");
-            }
+   		 case 1:
+        		handleSeasonFinder(scanner);
+        		break;
+    		case 2:
+        		handleTemperatureValidation(scanner);
+        		break;
+    		case 3:
+        		System.out.println("Exiting the program. Goodbye!");
+        		continueRunning = false;
+        		break;
+    		default:
+        		System.out.println("Invalid option. Please try again.");
+       			 break;
+	   }
         }
         scanner.close();
     }
     
     public static String validateTemperature(String city, double temperature) {
-        double minTemp, maxTemp, avgTemp;
-        switch (city.toLowerCase()) {
-            case "perth" -> { minTemp = 0.7; maxTemp = 46.0; avgTemp = 18.2; }
-            case "dubai" -> { minTemp = 1.5; maxTemp = 49.0; avgTemp = 26.9; }
-            default -> { return "City not recognized."; }
-        }
-
-        if (temperature < minTemp || temperature > maxTemp) {
-            return "Invalid temperature range.";
-        } else if (Math.abs(temperature - avgTemp) > 6) {
-            return "Temperature difference is greater than 6°C from the average.";
-        } else {
-            return "Temperature is within the normal range.";
-        }
+    	double minTemp = 0.0, maxTemp = 0.0, avgTemp = 0.0; // Initialize variables
+    	switch (city.toLowerCase()) {
+        	case "perth": {
+            		minTemp = 0.7; maxTemp = 46.0; avgTemp = 18.2;
+           		break; // Break is necessary to exit the switch after a case is matched
+        	}
+        	case "dubai": {
+            		minTemp = 1.5; maxTemp = 49.0; avgTemp = 26.9;
+            		break;
+        	}
+        	default: {
+            		return "City not recognized.";
+       		 }
     }
 
-    
-
+    	if (temperature < minTemp || temperature > maxTemp) {
+        	return "Invalid temperature range.";
+    	} else if (Math.abs(temperature - avgTemp) > 6) {
+        	return "Temperature difference is greater than 6°C from the average.";
+    	} else {
+        	return "Temperature is within the normal range.";
+    	}
+     }
     private static int getInputAsInt(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             System.out.println("Invalid input, try again!");
@@ -103,6 +114,7 @@ public class weatherInsightProgram {
         };
     }
 
+    
     public static String determineSeason(String country, String calendarType, int month) {
         if (month < 1 || month > 12) return "Invalid month provided.";
         
@@ -121,6 +133,7 @@ public class weatherInsightProgram {
         }
     }
 
+    //used to validate validate and determine the season in austrila is it the conventional(meathodiacal) or noongar.
     private static String determineSeasonAustralia(String calendarType, int month) {
         if ("noongar".equalsIgnoreCase(calendarType)) {
             return switch (month) {

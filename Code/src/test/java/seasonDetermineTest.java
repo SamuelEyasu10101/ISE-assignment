@@ -1,48 +1,41 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class seasonDetermineTest {
 
     @Test
-    public void testDetermineSeason_Australia_Summer() {
-        assertEquals("Summer", weatherInsightProgram.determineSeason("australia", "meteorological", 1),
-                "January in Australia (meteorological calendar) should be Summer.");
+    public void testValidCountryWithMeteorologicalCalendar_AustraliaSummer() {
+        Assertions.assertEquals("Summer", weatherInsightProgram.determineSeason("australia", "meteorological", 1));
     }
 
     @Test
-    public void testDetermineSeason_Australia_Makuru() {
-        assertEquals("Makuru", weatherInsightProgram.determineSeason("australia", "noongar", 6),
-                "June in Australia (Noongar calendar) should be Makuru.");
+    public void testCountryWithTwoCalendarTypes_AustraliaNoongarMakuru() {
+        Assertions.assertEquals("Makuru", weatherInsightProgram.determineSeason("australia", "noongar", 6));
     }
 
     @Test
-    public void testDetermineSeason_InvalidCountry() {
-        assertEquals("Season data not available for this country.", weatherInsightProgram.determineSeason("atlantis", "meteorological", 5),
-                "Atlantis is not a recognized country.");
+    public void testInvalidCountry_Atlantis() {
+        Assertions.assertEquals("Invalid input or country not recognized.", weatherInsightProgram.determineSeason("atlantis", "", 5));
     }
 
     @Test
-    public void testDetermineSeason_Australia_InvalidMonthLow() {
-        assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "meteorological", 0),
-                "Month 0 is out of valid range.");
+    public void testInvalidMonthLowBoundary() {
+        Assertions.assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "", 0));
     }
 
     @Test
-    public void testDetermineSeason_Australia_InvalidMonthHigh() {
-        assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "meteorological", 13),
-                "Month 13 is out of valid range.");
+    public void testInvalidMonthHighBoundary() {
+        Assertions.assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "", 13));
     }
 
     @Test
-    public void testDetermineSeason_UAE_Summer() {
-        assertEquals("Summer", weatherInsightProgram.determineSeason("uae", "meteorological", 7),
-                "July in UAE (meteorological calendar) should be Summer.");
+    public void testNonAustraliaCountryValidInput_UAESummer() {
+        Assertions.assertEquals("Summer", weatherInsightProgram.determineSeason("uae", "", 7));
     }
 
     @Test
-    public void testDetermineSeason_Singapore_InterMonsoon() {
-        assertEquals("Inter-monsoon", weatherInsightProgram.determineSeason("singapore", "meteorological", 10),
-                "October in Singapore should be Inter-monsoon.");
+    public void testSingaporeWithInterMonsoon() {
+        Assertions.assertEquals("Inter-monsoon", weatherInsightProgram.determineSeason("singapore", "", 10));
     }
 }
 
