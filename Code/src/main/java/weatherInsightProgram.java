@@ -107,7 +107,7 @@ public class weatherInsightProgram {
         System.out.println(validationMessage);
     }
 
-    private static boolean isValidCountry(String country) {
+    public static boolean isValidCountry(String country) {
         return switch (country) {
             case "uae", "united arab emirates", "singapore", "malaysia", "australia" -> true;
             default -> false;

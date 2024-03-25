@@ -1,0 +1,3 @@
+Category			Test Data		Expected Result
+Valid country check	Country: "australia"	true
+Invalid country check	Country: "westeros"	false
