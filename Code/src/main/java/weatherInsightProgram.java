@@ -58,7 +58,7 @@ public class weatherInsightProgram {
         	return "Temperature is within the normal range.";
     	}
      }
-    private static int getInputAsInt(Scanner scanner) {
+    public static int getInputAsInt(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             System.out.println("Invalid input, try again!");
             scanner.next(); // Clear the invalid input
@@ -69,7 +69,7 @@ public class weatherInsightProgram {
         return choice;
     }
 
-    private static void handleSeasonFinder(Scanner scanner) {
+    public static void handleSeasonFinder(Scanner scanner) {
         System.out.println("Available countries include UAE (United Arab Emirates), Singapore, Malaysia, Australia.");
         System.out.print("Enter the country: ");
         String country = scanner.nextLine().trim().toLowerCase();
@@ -92,7 +92,7 @@ public class weatherInsightProgram {
         System.out.println("Season: " + season);
     }
 
-    private static void handleTemperatureValidation(Scanner scanner) {
+    public static void handleTemperatureValidation(Scanner scanner) {
         System.out.print("Enter the city (Perth or Dubai): ");
         String city = scanner.nextLine().trim();
         System.out.print("Enter the temperature: ");
@@ -108,33 +108,46 @@ public class weatherInsightProgram {
     }
 
     public static boolean isValidCountry(String country) {
-        return switch (country) {
-            case "uae", "united arab emirates", "singapore", "malaysia", "australia" -> true;
-            default -> false;
-        };
-    }
+    System.out.println("Checking country: " + country);
+    boolean isValid = switch (country) {
+        case "uae", "united arab emirates", "singapore", "malaysia", "australia" -> {
+            System.out.println("Valid country found.");
+            yield true;
+        }
+        default -> {
+            System.out.println("Invalid country.");
+            yield false;
+        }
+    };
+    System.out.println("isValid: " + isValid);
+    return isValid;
+}
+
 
     
     public static String determineSeason(String country, String calendarType, int month) {
-        if (month < 1 || month > 12) return "Invalid month provided.";
-        
-        switch (country.toLowerCase()) {
-            case "australia":
-                return determineSeasonAustralia(calendarType, month);
-            case "uae":
-            case "united arab emirates":
-                return (month >= 5 && month <= 9) ? "Summer" : "Winter";
-            case "malaysia":
-            case "singapore":
-                return (month <= 2 || month == 12) ? "Northeast Monsoon" : 
-                       (month <= 4 || month >= 10) ? "Inter-monsoon" : "Southwest Monsoon";
-            default:
-                return "Season data not available for this country.";
-        }
+    if (!isValidCountry(country)) {
+        return "Invalid input or country not recognized.";
     }
+    
+    switch (country.toLowerCase()) {
+        case "australia":
+            return determineSeasonAustralia(calendarType, month);
+        case "uae":
+        case "united arab emirates":
+            return (month >= 5 && month <= 9) ? "Summer" : "Winter";
+        case "malaysia":
+        case "singapore":
+            return (month <= 2 || month == 12) ? "Northeast Monsoon" : 
+                   (month <= 4 || month >= 10) ? "Inter-monsoon" : "Southwest Monsoon";
+        default:
+            return "Season data not available for this country.";
+    }
+}
+
 
     //used to validate validate and determine the season in austrila is it the conventional(meathodiacal) or noongar.
-    private static String determineSeasonAustralia(String calendarType, int month) {
+    public static String determineSeasonAustralia(String calendarType, int month) {
         if ("noongar".equalsIgnoreCase(calendarType)) {
             return switch (month) {
                 case 12, 1 -> "Birak";

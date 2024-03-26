@@ -20,12 +20,14 @@ public class seasonDetermineTest {
 
     @Test
     public void testInvalidMonthLowBoundary() {
-        Assertions.assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "", 0));
+        String result = weatherInsightProgram.determineSeason("australia", "Gregorian", 0);
+        Assertions.assertEquals("Invalid month provided.", result);
     }
 
     @Test
     public void testInvalidMonthHighBoundary() {
-        Assertions.assertEquals("Invalid month provided.", weatherInsightProgram.determineSeason("australia", "", 13));
+        String result = weatherInsightProgram.determineSeason("australia", "Gregorian", 13);
+        Assertions.assertEquals("Invalid month provided.", result);
     }
 
     @Test

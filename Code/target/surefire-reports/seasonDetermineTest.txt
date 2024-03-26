@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: seasonDetermineTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.225 s <<< FAILURE! - in seasonDetermineTest
+testInvalidMonthHighBoundary  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Invalid month provided.> but was: <Spring>
+	at seasonDetermineTest.testInvalidMonthHighBoundary(seasonDetermineTest.java:30)
+
+testInvalidMonthLowBoundary  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Invalid month provided.> but was: <Spring>
+	at seasonDetermineTest.testInvalidMonthLowBoundary(seasonDetermineTest.java:24)
+
