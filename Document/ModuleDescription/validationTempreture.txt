@@ -1,4 +1,7 @@
 Module: validateTemperature
 Imports: String city, double temperature
 Exports: String (Temperature validation message)
-Description: Validates the temperature for a given city by checking if it falls within the predefined minimum, maximum, and average temperature ranges. It provides messages for temperatures that are outside the valid range, significantly differ from the average, or are within the normal range.
+
+Description: this method is used to validate the temperature for a given city by checking for the minimum, maximum, and average temprature range of specfic cities(Perth or Dubai). if the user enters a tempreature out side the raange the temperature won't be valid and will be prompted "invalid temperature"
+
+
